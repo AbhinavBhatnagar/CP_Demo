@@ -49,37 +49,26 @@ session_start();
             <div class="header-content-inner">
                 <h1 id="homeHeading">Welcome to CorePower</h1>
                 <hr>
-                <p>Brag about us to your friends and send them a coupon as well</p>
+                <p>Here is your coupon.</p>
+                <?php
 
+                if(isset($_SESSION['name']) && isset($_SESSION['user_id'])) //check whether user already logged in with twitter
+                {
+                  echo "Name :".$_SESSION['name']."<br>";
+                  echo "Twitter ID :".$_SESSION['user_id']."<br>";
+                }
+                ?>
+
+                <div>
+                  <a href="exit.php" class="btn btn-primary btn-xl page-scroll">Direct Message</a>
+                </div>
+                <br  />
                 <!--<a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>-->
                 <!--<div>
                   <a href="https://twitter.com/share" class="btn btn-primary btn-xl page-scroll" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div> -->
-                <div>
-                  <br />
-                </div>
-                <div>
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
-                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <div>
-                  <br />
-                </div>
-                <div>
-                  <a href="https://twitter.com/corepower" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @corepower</a>
-                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <div>
-                  <br />
-                </div>
-                <div>
-                  <a href="directmessage.php" class="btn btn-primary btn-xl page-scroll">Direct Message</a>
-                </div>
-                <br  />
-                <div>
-                  <a href="Coupon.php" class="btn btn-primary btn-xl page-scroll">Next</a>
-                </div>
+
                 <!-- <div>
                   <a href="https://twitter.com/messages/compose?recipient_id=480116063" data-size="xlarge" class="twitter-dm-button" data-screen-name="Cross_Viral" data-show-count="false" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife">Direct Message</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

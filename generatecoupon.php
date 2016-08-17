@@ -50,19 +50,7 @@ session_start();
                 <h1 id="homeHeading">Welcome to CorePower</h1>
                 <hr>
                 <p>Welcome! </p>
-                <?php
-
-                if(isset($_SESSION['name']) && isset($_SESSION['twitter_id'])) //check whether user already logged in with twitter
-                {
-
-                	echo "Name :".$_SESSION['name']."<br>";
-                	echo "Twitter ID :".$_SESSION['user_id']."<br>";
-                	echo "Image :<img src='".$_SESSION['image']."'/><br>";
-                	echo "<br/><a href='twitterlogin/logout.php'>Logout</a>";
-
-                }
-
-                ?>
+                
                 <p>Get Your Own Coupon For CorePower.</p>
                 <div> <a href="sharelink.php" class="btn btn-primary btn-xl page-scroll">Generate your coupon</a></div>
             </div>

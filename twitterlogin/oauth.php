@@ -45,7 +45,7 @@ else
 }
 else //Error. redirect to Login Page.
 {
-	header('Location: callback.php');
+	header('Location: ../exit.php');
 
 }
 
