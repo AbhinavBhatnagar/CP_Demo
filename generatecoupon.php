@@ -26,6 +26,7 @@ session_start();
 
     <!-- Theme CSS -->
     <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -116,7 +117,8 @@ session_start();
 
 
 <div class="products">
-
+    <div class="center-wrap">
+<ul>
 <li class="product-17"><a href="http://www.corepower.com/our-products/chocolate/">
   <img width="136" height="291" src="http://www.corepower.com/wp-content/uploads/2015/06/Chocolate_small.png" class="attachment-full size-full" alt="Chocolate_small">
   <p>
@@ -137,6 +139,8 @@ session_start();
   </a>
 </li>
 <li class="product-27"><a href="http://www.corepower.com/our-products/banana/"><img width="136" height="291" src="http://www.corepower.com/wp-content/uploads/2015/06/Banana_small.png" class="attachment-full size-full" alt="Banana_small"><p><span><span>Banana</span></span></p></a></li><li class="product-30"><a href="http://www.corepower.com/our-products/strawberry-banana-light/"><img width="136" height="291" src="http://www.corepower.com/wp-content/uploads/2015/06/StrawberryBananaLight_small.png" class="attachment-full size-full" alt="StrawberryBananaLight_small"><p><span><span>Strawberry Banana Light</span></span></p></a></li><li class="product-33"><a href="http://www.corepower.com/our-products/chocolate-light/"><img width="136" height="291" src="http://www.corepower.com/wp-content/uploads/2015/06/ChocolateLight_small.png" class="attachment-full size-full" alt="ChocolateLight_small"><p><span><span>Chocolate Light</span></span></p></a></li><li class="product-24238"><a href="http://www.corepower.com/our-products/elite-chocolate/"><img width="118" height="303" src="http://www.corepower.com/wp-content/uploads/2016/02/elite-chocolate-listing.png" class="attachment-full size-full" alt="elite-chocolate-listing" srcset="http://www.corepower.com/wp-content/uploads/2016/02/elite-chocolate-listing.png 118w, http://www.corepower.com/wp-content/uploads/2016/02/elite-chocolate-listing-117x300.png 117w" sizes="(max-width: 118px) 100vw, 118px"><p><span><span>ELITE Chocolate</span></span></p></a></li><li class="product-24307"><a href="http://www.corepower.com/our-products/elite-vanilla/"><img width="119" height="303" src="http://www.corepower.com/wp-content/uploads/2016/02/elite-vanilla-listing.png" class="attachment-full size-full" alt="elite-vanilla-listing" srcset="http://www.corepower.com/wp-content/uploads/2016/02/elite-vanilla-listing.png 119w, http://www.corepower.com/wp-content/uploads/2016/02/elite-vanilla-listing-118x300.png 118w" sizes="(max-width: 119px) 100vw, 119px"><p><span><span>ELITE<br>Vanilla</span></span></p></a></li> </ul>
+</ul>
+</div>
 </div>
 
 

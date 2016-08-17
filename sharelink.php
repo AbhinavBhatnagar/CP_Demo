@@ -1,21 +1,5 @@
 <?php
 session_start();
-ini_set('display_errors', 'On');
-require_once('twitterlogin/twitteroauth/twitteroauth.php');
-require_once('twitterlogin/twitteroauth/OAuth.php');
-include('twitterlogin/config.php');
-
-function direct_message_function() {
-  $connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $_SESSION['request_token'], $_SESSION['request_token_secret']);
-  $options = array("screen_name" => "ABtoABhinav", "text" => "Hey this is my message");
-  $response = $connection->post('https://api.twitter.com/1.1/direct_messages/new.json', $options);
-  echo $connection->http_code;
-
-}
-
-if (isset($_GET['dm'])) {
-  direct_message_function();
-}
 ?>
 
 <html lang="en">
@@ -100,7 +84,7 @@ if (isset($_GET['dm'])) {
                   <br />
                 </div>
                 <div>
-                  <a href='sharelink.php?dm=true' class="btn btn-primary btn-xl page-scroll">Direct Message</a>
+                  <a href="directmessage.php" class="btn btn-primary btn-xl page-scroll">Direct Message</a>
                 </div>
                 <!-- <div>
                   <a href="https://twitter.com/messages/compose?recipient_id=480116063" data-size="xlarge" class="twitter-dm-button" data-screen-name="Cross_Viral" data-show-count="false" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife">Direct Message</a>

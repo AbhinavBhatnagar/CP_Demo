@@ -436,3 +436,30 @@ position: absolute;
     left: 0;
 
 }
+.products {
+    padding: 60px 0;
+    background: #fff;
+    position: relative;
+}
+
+.products ul {
+    margin-top: 50px;
+    list-style: none;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.center-wrap {
+      max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.products ul li {
+      float: left;
+    text-align: center;
+    width: 132px;
+    margin-right: 4px;
+}
