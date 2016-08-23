@@ -60,14 +60,14 @@ session_start();
                   <br />
                 </div>
                 <div>
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
+                  <a href="https://twitter.com/share" class="twitter-share-button page-scroll" data-size="large" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div>
                   <br />
                 </div>
                 <div>
-                  <a href="https://twitter.com/corepower" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @corepower</a>
+                  <a href="https://twitter.com/corepower" class="twitter-follow-button page-scroll" data-size="large" data-show-count="false">Follow @corepower</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div>
