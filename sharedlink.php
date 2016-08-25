@@ -27,35 +27,14 @@ session_start();
 
     <!-- Theme CSS -->
     <link href="css/creative.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <script type='text/javascript'>
+        function showDiv() {
+            document.getElementById('gmcdiv_').style.display = 'block';
+        }
+    </script>
 </head>
 
 <body id="page-top">
-  <script type="text/javascript">
-  window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));
-  </script>
 
        <header>
         <div>
@@ -79,32 +58,26 @@ session_start();
                   <a href="https://twitter.com/share" class="twitter-share-button page-scroll" data-size="large" data-text="Guys, Check it out....." data-url="http://corepower.com" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
+                <br />
+                <br />
                 <div>
-                  <br />
-                </div>
-                <div>
-                  <a href="https://twitter.com/corepower" class="twitter-follow-button page-scroll"  data-size="large" data-show-count="false">Follow @corepower</a>
-                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8">
-                  twttr.ready(function (twttr) {
-                    twttr.events.bind('click', function(){document.getElementById('gmcdiv_').style.display = 'block';});
-                  });
+                  <script src="https://platform.twitter.com/widgets.js">
+
                   </script>
+                  <a id="follow" href="https://twitter.com/intent/follow?screen_name=corepower" onclick="showDiv()">
+                    <img src="img/follow.gif"/>
+                  </a>
+                </div>
+                <br  />
+                <div id="gmcdiv_" style="display:none;">
+                  <a id="gmc" href="Coupon.php" class="btn btn-primary btn-xl page-scroll" >Get my Coupon</a>
                 </div>
                 <div>
                   <br />
-
-                  <div id="gmcdiv_">
-                    <a id="gmc" href="Coupon.php" class="btn btn-primary btn-xl page-scroll" >Get my Coupon</a>
-                  </div>
-                
-                <!-- <div> style="display:none;"
-                  <a href="https://twitter.com/messages/compose?recipient_id=480116063" data-size="xlarge" class="twitter-dm-button" data-screen-name="Cross_Viral" data-show-count="false" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife">Direct Message</a>
-                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div> -->
-
             </div>
         </div>
     </header>
+
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -118,9 +91,6 @@ session_start();
         </div>
         <!-- /.container-fluid -->
     </nav>
-
--->
-
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>

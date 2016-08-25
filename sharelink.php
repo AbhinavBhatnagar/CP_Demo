@@ -13,7 +13,6 @@ if(isset($_SESSION['gmc_']))
 
 <html lang="en">
 
-
 <head>
 <!--http://corepower.com//wp-content/uploads/2016/02/moving-wallpaper-RAWS-2-NO-LEEPER-WEBM.webm-->
     <meta charset="utf-8">
@@ -38,13 +37,6 @@ if(isset($_SESSION['gmc_']))
     <!-- Theme CSS -->
     <link href="css/creative.min.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body id="page-top">
@@ -60,12 +52,6 @@ if(isset($_SESSION['gmc_']))
                 <h1 id="homeHeading">Welcome to CorePower</h1>
                 <hr>
                 <p>Brag about us to your friends and send them a coupon as well</p>
-
-                <!--<a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>-->
-                <!--<div>
-                  <a href="https://twitter.com/share" class="btn btn-primary btn-xl page-scroll" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
-                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div> -->
                 <div>
                   <br />
                 </div>
@@ -78,23 +64,55 @@ if(isset($_SESSION['gmc_']))
                 </div>
 
                 <div>
-                  <a id="dm" href="directmessage.php" onclick="javascript:showDiv()" class="btn btn-primary btn-xl page-scroll">Direct Message</a>
+                  <a id="dm" href="directmessage.php" class="btn btn-primary btn-xl page-scroll">Direct Message</a>
                 </div>
                 <br  />
                 <div id="gmcdiv"  style="display:none;">
-                  <a id="gmc" href="Usraddress.html" class="btn btn-primary btn-xl page-scroll" >Get my CorePower</a>
+                <!--  <a id="gmc" href="Usraddress.html" class="btn btn-primary btn-xl page-scroll" >Get my CorePower</a> -->
+                  <button type="button" id="gmc" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Get my CorePower</button>
                 </div>
-
-
-
-                <!-- <div>
-                  <a href="https://twitter.com/messages/compose?recipient_id=480116063" data-size="xlarge" class="twitter-dm-button" data-screen-name="Cross_Viral" data-show-count="false" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife">Direct Message</a>
-                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div> -->
 
             </div>
         </div>
     </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Welcome to CorePower</h4></h4>
+          </div>
+          <div class="modal-body">
+            <p>Complete your address</p>
+            <form role="form">
+              <div class="form-group">
+                <label for="Name">Name</label>
+                  <input type="text" class="form-control"
+                  id="Name" placeholder="Name"/>
+              </div>
+              <div class="form-group">
+                <label for="Address">Address</label>
+                  <input type="text" class="form-control"
+                      id="Address" placeholder="Address"/>
+              </div>
+              <div class="form-group">
+                <label for="Email">Email</label>
+                  <input type="email" class="form-control"
+                      id="Email" placeholder="Email"/>
+              </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          </div>
+
+      </form>
+    </div>
+        </div>
+      </div>
+    </div>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -109,10 +127,6 @@ if(isset($_SESSION['gmc_']))
 
         </div>
     </nav>
-
--->
-
-
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
