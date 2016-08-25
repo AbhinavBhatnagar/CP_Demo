@@ -11,7 +11,10 @@ if(isset($_SESSION['request_token']) && ($_SESSION['request_token_secret']))
   $connection_1 = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $ACCESS_TOKEN_KEY, $ACCESS_TOKEN_SECRET);
   $options = array("screen_name" => "abtoabhinav", "text" => "Hey that's my message");
   $response = $connection_1->post('https://api.twitter.com/1.1/direct_messages/new.json', $options);
-  header('Location: Coupon.php');
+  if (!isset($_SESSION['gmc_'])) {
+    $_SESSION['gmc_'] = true;
+  }
+header('Location: sharelink.php');
 }
 else
 {

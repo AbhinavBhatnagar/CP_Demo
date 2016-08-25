@@ -35,11 +35,19 @@ session_start();
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 
 <body id="page-top">
+  <script>
+  function clickEvent(){
+  document.getElementById('cpvideo').style.display = 'none';
+  document.getElementById('printlink').style.display = 'none';
+  window.print();
+}
+  </script>
        <header>
-        <div>
+        <div id="cpvideo">
         <video autoplay="autoplay" muted="muted" loop="loop">
             <source src="http://corepower.com//wp-content/uploads/2016/02/moving-wallpaper-RAWS-2-NO-LEEPER-WEBM.webm" type="   video/webm">
             <source src="http://corepower.com//wp-content/uploads/2016/02/moving-wallpaper-RAWS-2-NO-LEEPER-MP4.mp4" type="video/mp4">
@@ -54,7 +62,13 @@ session_start();
 
                 </div>
                 <div>
-                  <a href="test.php" class="btn btn-primary btn-xl page-scroll">Print your coupon</a>
+                  <img src="..\img\download.png" style="width:304px;height:228px;">
+                </div>
+                <div>
+                  <br />
+                </div>
+                <div>
+                  <a id="printlink" href="" onclick="clickEvent();" class="btn btn-primary btn-xl page-scroll">Print your coupon</a>
                 </div>
                 <br  />
                 <!--<a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>-->
@@ -82,24 +96,6 @@ session_start();
                 <a class="navbar-brand page-scroll" href="http://www.corepower.com/">CorePower</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>-->
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>

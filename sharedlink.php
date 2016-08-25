@@ -1,18 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION['gmc_']))
-{
-  echo "<script>",
-  "window.onload = function(){ ",
-    "document.getElementById('gmcdiv').style.display = 'block';",
-    "};",
-  "</script>";
-  unset($_SESSION['gmc_']);
-}
 ?>
 
 <html lang="en">
-
 
 <head>
 <!--http://corepower.com//wp-content/uploads/2016/02/moving-wallpaper-RAWS-2-NO-LEEPER-WEBM.webm-->
@@ -48,6 +38,25 @@ if(isset($_SESSION['gmc_']))
 </head>
 
 <body id="page-top">
+  <script type="text/javascript">
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+  </script>
+
        <header>
         <div>
         <video autoplay="autoplay" muted="muted" loop="loop">
@@ -55,39 +64,40 @@ if(isset($_SESSION['gmc_']))
             <source src="http://corepower.com//wp-content/uploads/2016/02/moving-wallpaper-RAWS-2-NO-LEEPER-MP4.mp4" type="video/mp4">
         </video>
         </div>
+        <div id="twitter-wjs">
+        </div>
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading">Welcome to CorePower</h1>
                 <hr>
                 <p>Brag about us to your friends and send them a coupon as well</p>
 
-                <!--<a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>-->
-                <!--<div>
-                  <a href="https://twitter.com/share" class="btn btn-primary btn-xl page-scroll" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
-                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div> -->
                 <div>
                   <br />
                 </div>
                 <div>
-                  <a href="https://twitter.com/share" class="twitter-share-button page-scroll" data-size="large" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
+                  <a href="https://twitter.com/share" class="twitter-share-button page-scroll" data-size="large" data-text="Guys, Check it out....." data-url="http://corepower.com" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div>
                   <br />
                 </div>
-
                 <div>
-                  <a id="dm" href="directmessage.php" onclick="javascript:showDiv()" class="btn btn-primary btn-xl page-scroll">Direct Message</a>
+                  <a href="https://twitter.com/corepower" class="twitter-follow-button page-scroll"  data-size="large" data-show-count="false">Follow @corepower</a>
+                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8">
+                  twttr.ready(function (twttr) {
+                    twttr.events.bind('click', function(){document.getElementById('gmcdiv_').style.display = 'block';});
+                  });
+                  </script>
                 </div>
-                <br  />
-                <div id="gmcdiv"  style="display:none;">
-                  <a id="gmc" href="Usraddress.html" class="btn btn-primary btn-xl page-scroll" >Get my CorePower</a>
-                </div>
+                <div>
+                  <br />
 
-
-
-                <!-- <div>
+                  <div id="gmcdiv_">
+                    <a id="gmc" href="Coupon.php" class="btn btn-primary btn-xl page-scroll" >Get my Coupon</a>
+                  </div>
+                
+                <!-- <div> style="display:none;"
                   <a href="https://twitter.com/messages/compose?recipient_id=480116063" data-size="xlarge" class="twitter-dm-button" data-screen-name="Cross_Viral" data-show-count="false" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife">Direct Message</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div> -->
@@ -105,9 +115,8 @@ if(isset($_SESSION['gmc_']))
                 </button>
                 <a class="navbar-brand page-scroll" href="http://www.corepower.com/">CorePower</a>
             </div>
-
-
         </div>
+        <!-- /.container-fluid -->
     </nav>
 
 -->
