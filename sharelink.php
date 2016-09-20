@@ -1,10 +1,18 @@
 <?php
 session_start();
+if(isset($_SESSION['name']) && isset($_SESSION['user_id'])) //check whether user already logged in with twitter
+{
+
+header('Location: index.html');
+
+}
 if(isset($_SESSION['gmc_']))
 {
   echo "<script>",
   "window.onload = function(){ ",
     "document.getElementById('gmcdiv').style.display = 'block';",
+    "document.getElementById('gmcdiv1').style.display = 'block';",
+   "document.getElementById('hid').style.display = 'none';",
     "};",
   "</script>";
   unset($_SESSION['gmc_']);
@@ -49,9 +57,18 @@ if(isset($_SESSION['gmc_']))
         </div>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Welcome to CorePower</h1>
+              <div id="gmcdiv1"  style="display:none;"> 
+                  <h1> THANKS!</h1>
+                  <hr>
+                  <p>Send another coupon or claim your case now
+                  (Limit one case per person. If you send more coupons, THANKS! But we can only provide one case per person…)</p>
+              </div>
+              <div id = "hid">
+                <h1 id="homeHeading">YOU’RE JUST A TWEET AWAY...</h1>
                 <hr>
-                <p>Brag about us to your friends and send them a coupon as well</p>
+                <p>Tell your friends about Core Power and send them a coupon as well...</p>
+              </div>
+
                 <div>
                   <br />
                 </div>
@@ -64,12 +81,12 @@ if(isset($_SESSION['gmc_']))
                 </div>
 
                 <div>
-                  <a id="dm" href="directmessage.php" class="btn btn-primary btn-xl page-scroll">Direct Message</a>
+                  <a id="dm" href="directmessage.php" class="btn btn-primary btn-xl page-scroll">DIRECT MESSAGE</a>
                 </div>
                 <br  />
                 <div id="gmcdiv"  style="display:none;">
                 <!--  <a id="gmc" href="Usraddress.html" class="btn btn-primary btn-xl page-scroll" >Get my CorePower</a> -->
-                  <button type="button" id="gmc" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Get my CorePower</button>
+                  <button type="button" id="gmc" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal">GET MY CASE!</button>
                 </div>
 
             </div>
@@ -84,26 +101,32 @@ if(isset($_SESSION['gmc_']))
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Welcome to CorePower</h4></h4>
+            <h4 class="modal-title">Core Power Case Delivery</h4></h4>
           </div>
           <div class="modal-body">
-            <p>Complete your address</p>
+            <p>Complete your shipping address (Street addresses only, no PO Boxes, please!)</p>
             <form role="form">
-              <div class="form-group">
-                <label for="Name">Name</label>
-                  <input type="text" class="form-control"
-                  id="Name" placeholder="Name"/>
-              </div>
               <div class="form-group">
                 <label for="Address">Address</label>
                   <input type="text" class="form-control"
-                      id="Address" placeholder="Address"/>
+                  id="Address" placeholder="Address"/>
               </div>
               <div class="form-group">
-                <label for="Email">Email</label>
-                  <input type="email" class="form-control"
-                      id="Email" placeholder="Email"/>
+                <label for="City">City</label>
+                  <input type="text" class="form-control"
+                      id="City" placeholder="City"/>
               </div>
+              <div class="form-group">
+                <label for="State">State</label>
+                  <input type="text" class="form-control"
+                      id="State" placeholder="State"/>
+              </div>
+              <div class="form-group">
+                <label for="Zip">Zip</label>
+                  <input type="text" class="form-control"
+                      id="Zip" placeholder="Zip"/>
+              </div>
+
           <div class="modal-footer">
             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
           </div>

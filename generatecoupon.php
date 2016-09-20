@@ -1,5 +1,11 @@
 <?php
 session_start();
+if(isset($_SESSION['name']) && isset($_SESSION['user_id'])) //check whether user already logged in with twitter
+{
+
+header('Location: index.html');
+
+}
 ?>
 <html lang="en">
 
@@ -47,12 +53,11 @@ session_start();
         </div>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Welcome to CorePower</h1>
+                <h1 id="homeHeading">TELL YOUR FRIENDS!</h1>
                 <hr>
-                <p>Welcome! </p>
 
-                <p>Get Your Own Coupon For CorePower.</p>
-                <div> <a href="ShootQuery.php" class="btn btn-primary btn-xl page-scroll">Generate your coupon</a></div>
+                <p>We’re excited to send you a case of CP just for helping us spread the word...</p>
+                <div> <a href="ShootQuery.php" class="btn btn-primary btn-xl page-scroll">Send your message NOW!</a></div>
             </div>
         </div>
     </header>
