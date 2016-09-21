@@ -53,11 +53,11 @@ header('Location: index.html');
         </div>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">TELL YOUR FRIENDS!</h1>
+                <h1 id="homeHeading">Welcome to Core Power</h1>
                 <hr>
 
-                <p>We’re excited to send you a case of CorePower just for helping us spread the word...</p>
-                <div> <a href="sharelink.php" class="btn btn-primary btn-xl page-scroll">Send your message NOW!</a></div>
+                <p>Thanks for stopping by to claim your Core Power coupon!</p>
+                <div> <a href="sharedlink.php" class="btn btn-primary btn-xl page-scroll">GET YOUR COUPON</a></div>
             </div>
         </div>
     </header>

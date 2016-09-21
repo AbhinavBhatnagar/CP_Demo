@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['name']) && isset($_SESSION['user_id'])) //check whether user already logged in with twitter
+if(!isset($_SESSION['name']) && !isset($_SESSION['user_id'])) //check whether user already logged in with twitter
 {
 
 header('Location: index.html');
@@ -60,11 +60,11 @@ header('Location: index.html');
                 <div>
                   <br />
                 </div>
-                <div>
+                <!-- <div>
                   <a href="https://twitter.com/share" class="twitter-share-button page-scroll" data-size="large" data-text="Guys, Check it out....." data-url="http://corepower.com" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <br />
+                </div> -->
+
                 <br />
                 <div>
                   <script src="https://platform.twitter.com/widgets.js">
@@ -75,6 +75,7 @@ header('Location: index.html');
                   </a>
                 </div>
                 <br  />
+                <br />
                 <div id="gmcdiv_" style="display:none;">
                   <a id="gmc" href="Coupon.php" class="btn btn-primary btn-xl page-scroll" >Get my Coupon</a>
                 </div>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['name']) && isset($_SESSION['user_id'])) //check whether user already logged in with twitter
+if(!isset($_SESSION['name']) && !isset($_SESSION['user_id'])) //check whether user already logged in with twitter
 {
 
 header('Location: index.html');
@@ -57,7 +57,7 @@ if(isset($_SESSION['gmc_']))
         </div>
         <div class="header-content">
             <div class="header-content-inner">
-              <div id="gmcdiv1"  style="display:none;"> 
+              <div id="gmcdiv1"  style="display:none;">
                   <h1> THANKS!</h1>
                   <hr>
                   <p>Send another coupon or claim your case now
@@ -72,10 +72,10 @@ if(isset($_SESSION['gmc_']))
                 <div>
                   <br />
                 </div>
-                <div>
+                <!-- <div>
                   <a href="https://twitter.com/share" class="twitter-share-button page-scroll" data-size="large" data-text="Guys, Check it out....." data-url="http://corepower.com" data-via="corepower" data-hashtags="EVERYDAYAWESOME #corepower" data-related="corepower,fairlife" data-show-count="false">Tweet</a>
                   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+                </div> -->
                 <div>
                   <br />
                 </div>

@@ -20,10 +20,10 @@ $rows = $manager->executeQuery("FairLife_Coupon_Twitter.influencers_", $query);
 $rows_obj = $rows->toArray();
 echo "<br />";
 if (array_key_exists(0, $rows_obj)) {
-  header('Location: sharelink.php');
+  header('Location: ../generatecoupon.php');
 }
 else{
-  header('Location: sharedlink.php');
+  header('Location: ../gencoupons.php');
 }
 
 ?>

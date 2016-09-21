@@ -26,8 +26,9 @@ if(isset($_GET['oauth_token']))
 				$_SESSION['twitter_id']=$content->screen_name;
 				$_SESSION['user_id'] = $access_token['user_id'];
 
+				include('../ShootQuery.php');
 				//redirect to main page.
-				header('Location: ../generatecoupon.php');
+				//header('Location: ../generatecoupon.php');
 
 			}
 			else

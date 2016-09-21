@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['name']) && isset($_SESSION['user_id'])) //check whether user already logged in with twitter
+if(!isset($_SESSION['name']) && !isset($_SESSION['user_id'])) //check whether user already logged in with twitter
 {
 
 header('Location: index.html');
